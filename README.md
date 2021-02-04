@@ -12,7 +12,7 @@ Existen muchos editores muy buenos para trabajar con HTML, como sublime, Komodo,
 
 En este link puedes [descargar](https://code.visualstudio.com/download) VS code.
 
-Una ves lo descargues puedes explorar [extenciones](https://www.elegantthemes.com/blog/wordpress/top-vs-code-extensions-for-web-developers) útiles.
+Una vez lo descargues puedes explorar [extenciones](https://www.elegantthemes.com/blog/wordpress/top-vs-code-extensions-for-web-developers) útiles.
 
 
 ### Primeros pasos
@@ -198,7 +198,10 @@ Genera el siguiente formulario:
 
 
 ### links útiles
-- [br obsoleto](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
+- [tutorial básico de html](https://html.com)
+- [porqué `<br>` es obsoleto](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
+- [listas](https://html.com/tags/li/)
+- [tablas](https://html.com/tags/table/)
 -  [formularios](https://html.com/forms/)
 - [documentacion sobre etiquetas](https://www.w3schools.com/tags/ref_byfunc.asp)
 - [historia de html](https://www.yourhtmlsource.com/starthere/historyofhtml.html)
