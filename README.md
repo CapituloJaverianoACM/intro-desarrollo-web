@@ -32,6 +32,8 @@ Este es el lenguaje en el cual la mayoría de páginas están escritas. Sus sigl
 
 [Este](https://html.com) es un buen recurso para ver la información más a fondo.
 
+[CS50](https://www.youtube.com/watch?v=78wdlyzrKOA) es el curso introductorio a programación web de Harvard donde hablan un poco de HTML.
+
 ## Etiquetas
 Una etiqueta se utiliza para demarcar un elemento. Estas están encerradas entre **<** y **>** y suelen tener una etiqueta de apertura y una de cerrado. Por ejemplo, la etiqueta que muestra un título es 
 
@@ -206,6 +208,8 @@ A continuación veremos cómo agregarle estilo a nuestra página por medio de CS
 CSS o Cascading Style Sheets permite agregarle estilo a a la página. Podemos utilizarlo para estilizar elementos específicos del HTML.
 [Este](https://scrimba.com/learn/introtocss) es un muy buen curso graties para iniciar a aprender.
 
+[Curso](https://www.youtube.com/watch?v=g7nZFp2zSJ4)  de Harvard sobre CSS 
+
 
 ## Inline CSS
 
@@ -287,16 +291,76 @@ Para asignarle una clase a un elemento se utiliza el atributo class así:
 *index.html*
 ```
 <h1 class="titulo-rojo">
-    Hello World! 
+    Quiero que este titulo sea rojo 
 </h1>
 
+<h1 class="titulo-rojo">
+    Tambien quiero que este sea rojo
+</h1>
+
+<h1>
+    pero no quiero que este sea rojo :)
+</h1>
 ```
+
+## ID
+Las clases son buenas para agrupar elementos con estilos similares, pero si queremos darle estilo a un elemto en específico, utilizamos los ID.
+Estos se definen en el CSS con un **#** antes del id, y en el html con el atributo **id**.
+
+- Los ID deberían ser únicos dentro de la página.
+- Si un elemento tiene una clase y un ID asociado, toma todas las reglas de la clase y ademas todas las del ID.
+- El ID tiene jerarquia mayor a la de la clase.
+
+Por ejemplo:
+
+*style.css*
+```
+.titulo-rojo{
+    color: red;
+}
+
+#titulo-principal{
+    text-decoration: underline;
+}
+```
+
+
+
+*index.html*
+```
+<h1 class="titulo-rojo" id="titulo-principal">
+    Titulo rojo y subrayado
+</h1>
+
+<h1 class="titulo-rojo">
+    titulo rojo
+</h1>
+
+<h1>
+    este es el titulo por default
+</h1>
+```
+
+Si empiezas a jugar con las reglas y diferentes combinaciones de clases y id, notarás que si hay propiedades que se contradigan entre la clase y el ID, el elemento tomará lo que diga el ID pues tiene mayor jerarquia.
+
+[Acá](https://www.tutorialrepublic.com/css-reference/css3-properties.php) encontrarás muchas propiedades que le puedes aplicar a diferentes etiquetas.
+
+Existen más selectores ademas del ID y de la clase, [acá](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#different_types_of_selectors) podrás ver cuales son y como utilizarlos.
+
+Existen muchísimas propiedades que se pueden utilizar para estilizar una página web, [acá](https://css-playground.com/view/45/css-gradient-playground) puedes ver algunas de ellas y como implementarlas.
+
+## DIV
+Existe una etiqueta muy útil en html que no hemos visto aun, ya que sin css no es muy interesante. La etiqueta `<div>` es un contenedor y permite anidar más elementos html dentro de él.
+
+Puedes ver más información en [este](https://www.youtube.com/watch?v=-XQlr727A8w) video.
+
 
 
 ## links útiles
 - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
 - https://www.w3schools.com/css/
 - https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/
+- [Harvard CS50](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
 
 
 
