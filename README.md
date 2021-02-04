@@ -27,12 +27,12 @@ Todo lo que sigue en este tutorial puedes recrearlo en este archivo para ver los
 
 <hr />
 
-## HTML
+# HTML
 Este es el lenguaje en el cual la mayoría de páginas están escritas. Sus siglas significan **hypertext markup language**. El HTML define la estructura de una página web, mas no su estilo, para eso existe el CSS (que va a aparecer mas tarde en este tutorial). 
 
 [Este](https://html.com) es un buen recurso para ver la información más a fondo.
 
-### Etiquetas
+## Etiquetas
 Una etiqueta se utiliza para demarcar un elemento. Estas están encerradas entre **<** y **>** y suelen tener una etiqueta de apertura y una de cerrado. Por ejemplo, la etiqueta que muestra un título es 
 
 ```
@@ -47,7 +47,7 @@ Las etiquetas pueden tener más etiquetas anidadas dentro de ellas como se va a 
 
 Esta es una [lista](https://www.w3schools.com/tags/default.asp) de varias etiquetas de HTML. Cada una tiene una función específica. Es importante recordar que las etiquetas añaden funcionalidad y estructura a la página, mas no estilo.
 
-### Estructura
+## Estructura
 Esta es la estructura básica que deben tener las páginas construidas con HTML.
 
 ![alt text](images/html_structure.png)
@@ -56,7 +56,7 @@ Primero `<!DOCTYPE html>` define el lenguaje que se utilizará (en este caso, HT
 
 `<html>` especifica que ahora empezaremos a escribir en HTML.
 
-`<head>` contiene el título y metadata que especificará cosas como la hoja de estilos que se va a utilizar (lo cual veremos mas adelante), palabras clave para que los buscadores encuentren contenido de la página,  descripciones, el nombre del autor etc. [Aqui](https://www.w3schools.com/html/html_head.asp) puedes encontrar más información.
+`<head>` contiene el título y metadata que especificará cosas como la hoja de estilos que se va a utilizar (lo cual veremos mas adelante), palabras clave para que los buscadores encuentren contenido de la página,  descripciones, el nombre del autor etc. [Aqui](https://www.w3schools.com/html/html_head.asp) puedes encontrar más información. Por ejemplo, si no especificas que se utilizará UTF-8, no podrás usar la letra **ñ**. Puedes hacerlo con la etiqueta `<meta charset="UTF-8">` dentro de la etiqueta `<head>`.
 
 `<body>` Dentro de esta etiquetá irá todo el cuerpo de nuestra página. Esto incluye textos, imagenes, tablas, listas etc.
 
@@ -80,7 +80,7 @@ A continuación un ejemplo de de una página muy simple.
 ```
 
 
-### Atributos
+## Atributos
 Es información extra que se le da a una etiqueta. Se escribe en la etiqueta de apertura. Una etiqueta puede tener cero o varios atributos.
 
 Por ejemplo, la etiqueta `<img>` sirve para pintar una imagen dentro de la página, pero esta necesita información extra para saber qué imagen es la que se va a pintar.
@@ -90,6 +90,12 @@ Por ejemplo, la etiqueta `<img>` sirve para pintar una imagen dentro de la pági
 
 Acá el atributo `src` le indica a la etiqueta `img` la ruta de la imagen (esta puede ser una URL o una ruta dentro del mismo proyecto).
 La etiqueta `alt` el texto alternativo de la imagen.
+
+Existen bastantes atributos que no deberían usarse ya que no definen la funcionalidad sino el estilo, por ejemplo, se puede especificar el ancho y el alto de la imagen así:
+
+```
+<img src="https://crhscountyline.com/wp-content/uploads/2020/03/Capture.png" alt="doge" width="100" height="100">
+```
 
 
 **Siempre recuerda!** 
@@ -123,7 +129,7 @@ Es equivalente a:
 
 <hr />
 
-### Formularios
+## Formularios
 
 Uno de los usos más comunes en las páginas web, son los formularios. Estos están definidos con la etiqueta `<form>` y dentro pueden tener varios  elementos para ingresar diferentes datos.
 
@@ -131,7 +137,9 @@ Por ejemplo, el siguiente código:
 
 
 ```
-
+<h1>
+    mi primer formulario
+</h1>
 <form>
     <input type="text" placeholder="nombre">
     <br>
@@ -164,40 +172,13 @@ Por ejemplo, el siguiente código:
 
 Genera el siguiente formulario:
 
-<form>
-    <input type="text" name="nombre" placeholder="nombre">
-    <br>
-    <input type="text" name="apellido" placeholder="apellido"> 
-    <br>
-    <input type="text" name="pais"
-    placeholder="pais"> 
-    <br>
-    <input type="password" name="contra" placeholder="contraseña"> 
-    <br>
-    <input type="password" name="verificar" placeholder="contraseña"> 
-    <br>
-    <select name="carrera"> 
-        <option value="sis">Ingenieria de sistemas</option> 
-        <option value="ind">Ingenieria industrial</option>
-        <option value="blue">Ingenieria electronica</option>
-       <option value="black">Ingenieria civil</option>
-    </select> 
-    <br>
-    <input type="radio" name="genero" value="masculino">
-    <label for="masculino">Masculino</label><br>
-    <input type="radio" id="femenino" name="genero" value="femenino">
-    <label for="femenino">Femenino</label><br>
-    <input type="radio" id="otro" name="genero" value="otro">
-    <label for="other">Otro</label>
-    <br>
-    <input type="submit" value="entrar"> 
-</form>
+![alt text](images/form.png)
 
 
 **CUIDADO!** acá utilizamos la etiqueta `<br>` que significa break line para mostrar todos los elementos verticalmente, esto debe evitarse ya que es una etiqueta obsoleta, pues como dijimos antes, HTML solo debería especificar la funcinoalidad y la estructuram no el estili. Hace años cuando HTML aun era nueva, esta etiqueta era bastante común, ahora, debería usarse CSS para cambiar el estilo. 
 
 
-### links útiles
+## links útiles
 - [tutorial básico de html](https://html.com)
 - [porqué `<br>` es obsoleto](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
 - [listas](https://html.com/tags/li/)
@@ -207,6 +188,115 @@ Genera el siguiente formulario:
 - [historia de html](https://www.yourhtmlsource.com/starthere/historyofhtml.html)
 
 
+## Ejercicio
+
+Intenta recrear esta página utilizando lo que has aprendido (los nombres son links a las paginas de wikipedia de los actores).
+
+![alt text](images/ejemplo.png)
+
+
+
+## Resumen
+HTML utiliza etiquetas y atributos para definir la funcionalidad y la estructura de la página. Estas siguen una sintaxis que permite anidar etiquetas en el cuerpo de otras etiquetas. Existen elementos obsoletos que no deben ser utilizados como la etiqueta `<br>`. 
+A continuación veremos cómo agregarle estilo a nuestra página por medio de CSS.
+
+<br>
+
+# CSS
+CSS o Cascading Style Sheets permite agregarle estilo a a la página. Podemos utilizarlo para estilizar elementos específicos del HTML.
+[Este](https://scrimba.com/learn/introtocss) es un muy buen curso graties para iniciar a aprender.
+
+
+## Inline CSS
+
+La forma más facil (y menos recomendable) de estilizar, es utilizando el atributo `style` dentro del mismo HTML. Por ejemplo:
+
+```
+<h1 style="color: red;"> Este es un texto rojo! </h1>
+```
+Acá tomamos la propiedad *color* de nuestro título y le asignamos el color rojo.
+Sólamente este elemento será de color rojo, esta no es una forma escalable de agregarle estilo a nuestra página, por lo que no es nada recomendable.
+
+## Interno
+
+Entre la etiqueta `<head>` se puede definir el estilo con la etiqueta `<style>`. Por ejemplo:
+
+```
+<head>  
+    <style>  
+        h1 {  
+            color: red;  
+        }  
+    </style>  
+</head>
+```
+
+En este ejemplo se le está asignando el color rojo a todos los elementos `<h1>` del archivo. 
+
+
+## Externo
+
+Esta es la forma más recomendada para agregarle estilo a nuestra página. Con un archivo externo con extensión CSS en el que se definen todos los estilos. Este archivo se importa desde el HTML utilizando la etiqueta `<link>` entre la etiqueta `<head>`.
+
+```
+<head>  
+    <link rel="stylesheet" href="style.css">  
+</head>
+```
+Ahora, en la misma carpeta en que creaste tu archivo index.html crea un archivo vacio llamado style.css.
+
+Un archivo CSS está compuesto de varias reglas. Cada regla tiene un **selector** cada selector tiene una o varias **propiedades** y cada propiedad tiene un **valor**.
+
+El conjuto de propiedades va despues del selector entre corchetes {}.
+
+Cada propiedad se separa de su valor con dos puntos **(:)**  y despues de el valor se escribe punto y coma **(;)**
+
+Por ejemplo:
+
+```
+h1 {  
+    color: red;  
+    background-color: black;
+} 
+
+```
+
+`h1` es el Selector.<br>
+`color` es una propiedad a la cual se le asigna el valor `red`.
+
+`background-color` es otra propiedad a la cual se le asigna la propiedad `black`.
+
+En este caso estamos indicando que todos los elementos `<h1>` en nuestra página, ya no van a ser negros como lo son por default, sino ahora serán rojos y el color del fondo será negro.
+
+### Clases
+Sin embargo, muchas veces no queremos que todos elementos iguales tengan exactamente el mismo estilo. Muchas veces queremos agrupar en diferentes clases elementos parecidos.
+
+Otra forma de seleccionar elementos para agregarles estilos es mediante clases. Para eso debemos agregarle el atributo class a la etiqueta en html. Para declarar una clase en el archivo css se utiliza un pnto antes del nombre de la clase.
+
+por ejemplo:
+
+*style.css*
+```
+.titulo-rojo{
+    color: red;
+}
+```
+Al agregar esta regla en nuestro CSS, todos los elementos del HTML que sean de la clase *titulo-rojo* serán de color rojo.
+Para asignarle una clase a un elemento se utiliza el atributo class así:
+
+*index.html*
+```
+<h1 class="titulo-rojo">
+    Hello World! 
+</h1>
+
+```
+
+
+## links útiles
+- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+- https://www.w3schools.com/css/
+- https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/
 
 
 
