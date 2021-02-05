@@ -120,7 +120,6 @@ Existen bastantes atributos que no deberían usarse ya que no definen la funcion
 
 Es equivalente a:
 
-<hr/>
 
 <img src="https://crhscountyline.com/wp-content/uploads/2020/03/Capture.png" alt="doge">
 <p>
@@ -177,7 +176,7 @@ Genera el siguiente formulario:
 ![alt text](images/form.png)
 
 
-**CUIDADO!** acá utilizamos la etiqueta `<br>` que significa break line para mostrar todos los elementos verticalmente, esto debe evitarse ya que es una etiqueta obsoleta, pues como dijimos antes, HTML solo debería especificar la funcinoalidad y la estructuram no el estili. Hace años cuando HTML aun era nueva, esta etiqueta era bastante común, ahora, debería usarse CSS para cambiar el estilo. 
+**CUIDADO!** acá utilizamos la etiqueta `<br>` que significa break line para mostrar todos los elementos verticalmente, esto debe evitarse ya que es una etiqueta obsoleta, pues como dijimos antes, HTML solo debería especificar la funcinoalidad y la estructura no el estilo. Hace años cuando HTML aun era nueva, esta etiqueta era bastante común, ahora, debería usarse CSS para cambiar el estilo. 
 
 
 ## links útiles
@@ -188,6 +187,10 @@ Genera el siguiente formulario:
 -  [formularios](https://html.com/forms/)
 - [documentacion sobre etiquetas](https://www.w3schools.com/tags/ref_byfunc.asp)
 - [historia de html](https://www.yourhtmlsource.com/starthere/historyofhtml.html)
+- [etiquetas que van dentro de head](https://www.w3schools.com/html/html_head.asp)
+- [lista de etiquetas](https://www.w3schools.com/tags/default.asp)
+- [curso CS50 de harvard](https://www.youtube.com/watch?v=78wdlyzrKOA)
+
 
 
 ## Ejercicio
@@ -313,7 +316,7 @@ Estos se definen en el CSS con un **#** antes del id, y en el html con el atribu
 
 Por ejemplo:
 
-*style.css*
+>style.css*
 ```
 .titulo-rojo{
     color: red;
@@ -326,7 +329,7 @@ Por ejemplo:
 
 
 
-*index.html*
+>index.html*
 ```
 <h1 class="titulo-rojo" id="titulo-principal">
     Titulo rojo y subrayado
@@ -350,17 +353,90 @@ Existen más selectores ademas del ID y de la clase, [acá](https://developer.mo
 Existen muchísimas propiedades que se pueden utilizar para estilizar una página web, [acá](https://css-playground.com/view/45/css-gradient-playground) puedes ver algunas de ellas y como implementarlas.
 
 ## DIV
-Existe una etiqueta muy útil en html que no hemos visto aun, ya que sin css no es muy interesante. La etiqueta `<div>` es un contenedor y permite anidar más elementos html dentro de él.
+Existe una etiqueta muy útil en html que no hemos visto aun, ya que sin css no es muy interesante. La etiqueta `<div>` es un contenedor, permite anidar más elementos html dentro de él y organizar los elementos en unidades lógicas.
 
 Puedes ver más información en [este](https://www.youtube.com/watch?v=-XQlr727A8w) video.
 
 
 
+
+
+Por ejemplo, considera el siguiente código. Cambia un poco los estilos para explorar todas propiedades que se le pueden agregar a los divs.
+
+>style.css
+```
+div{
+    border: solid;
+    margin-bottom: 30px;;
+}
+.section{
+    border-color: blue;
+}
+#nav-bar{
+    padding: 10px;
+    border-color: red;
+}
+#nav-image{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+```
+
+>index.html
+
+```
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <title> Example web page</title>
+        
+    </head>
+    <body>
+        <div id="nav-bar">
+            <img id="nav-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Association_for_Computing_Machinery_%28ACM%29_logo.svg/600px-Association_for_Computing_Machinery_%28ACM%29_logo.svg.png">
+            Esta es una barra de navegación muy feita
+        </div>
+        <div class="section">
+            <h1>Sección 1</h1>
+            <p>Este es un parrafo que esta en la seccion 1</p>
+        </div>
+        <div class="section">
+            <h1>Sección 2</h1>
+            <p> Este es un parrafo que esta en la seccion 2</p>
+        </div>
+    </body>
+</html>
+```
+
+
 ## links útiles
-- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
-- https://www.w3schools.com/css/
-- https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/
+- [CSS basico](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS basico](https://www.w3schools.com/css/)
+- [tutorial de CSS](https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/)
 - [Harvard CS50](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
+- [Divs](https://www.youtube.com/watch?v=-XQlr727A8w)
+- [playground](https://css-playground.com/view/45/)
+- [Selectores](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#different_types_of_selectors)
+
+## Ejercicio
+Intenta replicar este fragmento de la página de github.
+![alt text](images/github_screenshot.png)
+
+Ten en cuenta que
+- los botones cambian de color cuando tienen el cursos encima
+- la tipografía 
+- intenta ser lo más organizado posible para no utilizar más clases e IDs de lo necesario.
 
 
+
+## Resumen
+- El CSS está compuesto de reglas y sirve para agregarle estilo a la página.
+- Una regla está ompuesta por varias propiedades, a cada propieddad se le asigna un valor.
+- Hay tres formas de agregarle CSS a un html pero la más recomendable es utilizando un archivo externo.
+- Un buen estilo utiliza la mejor combinación de clases, ids y selectores para darle consistencia a la estructura del sitio web.
+
+
+<hr/>
 
