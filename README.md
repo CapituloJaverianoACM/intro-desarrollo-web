@@ -591,19 +591,64 @@ Ahora.... supongamos que varios desarrolladores han trabajado cada uno en sus ra
 
 ![alt text](images/PR.png)
 
+![alt text](images/pr2.png)
+
+![alt text](images/pr3.png)
+
+
 
 Para esto, debes trabajar en una rama separada, hacerle push a esa rama y luego utilizar, ya sea github desktop o el sitio web de github, para hacer un pull request
+
+Github automáticamente revisa que no haya conflictos entre las dos ramas, si no hay problema, una vez el dueño del repositorio le de el visto bueno, se puede unir con la rama a la que se le haya hecho el pull request (en este caso, la rama main).
+
+**importante:** Al trabajar con diferentes ramas es muy común que haya problemas de consistencia entre diferentes versiones y este puede ser un problema muy tedioso de resolver pero no lo trataremos en este tutorial.
+[Aqui](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) hay más información. Además, casi todos los editores de código proveen herramientas para que solucionar esto sea más facil.
+
+#Ejercicio
+
+Ahora vamos a poner a prueba todo lo que has aprendido de HTML, CSS y git.
 
 ## Pasos
 
 - Abre una cuenta gratis en github
 - clona el repositorio
 - crea una rama con tu nombre
-- modifica el archivo index.html para agregar un boton que lleve a tu página
-- crea tu página en un archivo html con tu nombre y apellido por ejemplo: *juan_perez.html*
+- modifica el archivo index.html en la carpeta web_page para agregar un boton que lleve a tu página
+- crea tu página en un archivo html con tu nombre y apellido por ejemplo: *juan_perez.html* (mas adelante estan las instrucciones para esta página)
+- utiliza el mismo archivo style.css para darle estilo a tu pagina, puedes añadir cosas, pero no puedes interferir con lo que ya se haya hecho.
 - añade tus cambios, haz un commit
 - haz un pull request para incorporar tus cambios a la rama principal.
 
+
+## instrucciones
+Tu página debe ser tu hoja de vida y debe tener:
+- tu foto
+- tu informacion personal incluyendo un link a tu página de github
+- una lista con tus proyectos importantes
+- una tabla con tus 5 canciones favoritas asi:
+
+<table>
+    <th>Cancion </th>
+    <th>Album</th>
+    <th>Artista</th>
+    <th>Fecha</th>
+    <tr>
+        <td>cancion 1</td>
+        <td>album de la cancion 1</td>
+        <td>Artista 1</td>
+        <td>fecha 1</td>
+    </tr>
+    <tr>
+        <td>cancion 2</td>
+        <td>album de la cancion 2</td>
+        <td>Artista 2</td>
+        <td>fecha 2</td>
+    </tr>
+</table>
+
+- al menos dos videos de youtube
+- una sección con tus 4 memes favoritos
+- un botón que al presionarlo devuelva a la página principal (index.html)
 
 
 
@@ -615,4 +660,5 @@ Para esto, debes trabajar en una rama separada, hacerle push a esa rama y luego 
 - [cheat sheet de comandos de git](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 - [terminal integrada en vscode](https://code.visualstudio.com/docs/editor/integrated-terminal)
 - [pull requests](https://www.youtube.com/watch?v=rgbCcBNZcdQ)
-- [gir merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
+- [git merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
+- [Merge conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) 
