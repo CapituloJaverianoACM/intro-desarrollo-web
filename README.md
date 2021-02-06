@@ -340,7 +340,7 @@ Estos se definen en el CSS con un **#** antes del id, y en el html con el atribu
 
 Por ejemplo:
 
->style.css*
+>style.css
 ```
 .titulo-rojo{
     color: red;
@@ -352,8 +352,7 @@ Por ejemplo:
 ```
 
 
-
->index.html*
+>index.html
 ```
 <h1 class="titulo-rojo" id="titulo-principal">
     Titulo rojo y subrayado
@@ -450,7 +449,7 @@ Intenta replicar este fragmento de la página de github.
 ![alt text](images/github_screenshot.png)
 
 Ten en cuenta que
-- los botones cambian de color cuando tienen el cursos encima
+- los botones cambian de color cuando tienen el cursor encima
 - la tipografía 
 - intenta ser lo más organizado posible para no utilizar más clases e IDs de lo necesario.
 
