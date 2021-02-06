@@ -14,6 +14,7 @@ En este link puedes [descargar](https://code.visualstudio.com/download) VS code.
 
 Una vez lo descargues puedes explorar [extenciones](https://www.elegantthemes.com/blog/wordpress/top-vs-code-extensions-for-web-developers) útiles.
 
+[Estas](https://docs.google.com/document/d/e/2PACX-1vQDcdmrkjNPlOSeqS-v99P-57h5f7Yo3pszkko1sN6OtIVlNBFgTyeTX3A1mDSOdw1Ugb1l5o0NVy-a/pub) son otras extenciones muy útiles.
 
 ### Primeros pasos
 Primero que todo, crea una carpeta en tu computador con cualquier nombre. Dentro de esa carpeta crea un archivo con nombre index.html (en realidad puede tener cualquier nombre el archivo mientras tenga la extencion .html, pero index es la costumbre para página principal).
@@ -25,7 +26,15 @@ Abre esa carpeta usando visual studio code. deberías tener algo como esto.
 Todo lo que sigue en este tutorial puedes recrearlo en este archivo para ver los resultados tu mismo. Para abrir tu página en el navegador, peudes hacer doble click en el archivo en el explorador de archivos, o escribir el path en el navegador, por ejemplo:
 > file://C:/Documents/primera_pagina_web/index.html
 
+
+## links útiles
+- [descargar vs code](https://code.visualstudio.com/download)
+- [Extensiones de vs code](https://docs.google.com/document/d/e/2PACX-1vQDcdmrkjNPlOSeqS-v99P-57h5f7Yo3pszkko1sN6OtIVlNBFgTyeTX3A1mDSOdw1Ugb1l5o0NVy-a/pub)
+- [más extensiones de vs code](https://www.elegantthemes.com/blog/wordpress/top-vs-code-extensions-for-web-developers)
+
 <hr />
+
+
 
 # HTML
 Este es el lenguaje en el cual la mayoría de páginas están escritas. Sus siglas significan **hypertext markup language**. El HTML define la estructura de una página web, mas no su estilo, para eso existe el CSS (que va a aparecer mas tarde en este tutorial). 
@@ -130,6 +139,19 @@ Es equivalente a:
 
 <hr />
 
+## Anchor tag
+Junto al atributo hrf, esta crea un vínculo a otra página de internet.
+
+por ejemplo
+```
+<a href="https://www.google.com/"> Link a google </a>
+
+```
+
+crea un link que cuando se le haga click, enviará a google.com
+
+El atributo `href` puede recibir links o rutas relativas dentro del proyecto. [Aquí](https://stackoverflow.com/questions/24028561/relative-path-in-html) puedes encontrar más información sobre eso.
+
 ## Formularios
 
 Uno de los usos más comunes en las páginas web, son los formularios. Estos están definidos con la etiqueta `<form>` y dentro pueden tener varios  elementos para ingresar diferentes datos.
@@ -180,6 +202,8 @@ Genera el siguiente formulario:
 
 
 ## links útiles
+- [curso de desarrollo web](https://www.appbrewery.co/p/web-development-course-resources) (muy recomendado)
+- [curso CS50 de harvard](https://www.youtube.com/watch?v=78wdlyzrKOA) (super recomendado)
 - [tutorial básico de html](https://html.com)
 - [porqué `<br>` es obsoleto](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
 - [listas](https://html.com/tags/li/)
@@ -189,7 +213,7 @@ Genera el siguiente formulario:
 - [historia de html](https://www.yourhtmlsource.com/starthere/historyofhtml.html)
 - [etiquetas que van dentro de head](https://www.w3schools.com/html/html_head.asp)
 - [lista de etiquetas](https://www.w3schools.com/tags/default.asp)
-- [curso CS50 de harvard](https://www.youtube.com/watch?v=78wdlyzrKOA)
+- [rutas relativas](https://stackoverflow.com/questions/24028561/relative-path-in-html)
 
 
 
@@ -412,6 +436,7 @@ div{
 
 
 ## links útiles
+- [curso de desarrollo web](https://www.appbrewery.co/p/web-development-course-resources) (recomendadísimo)
 - [CSS basico](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [CSS basico](https://www.w3schools.com/css/)
 - [tutorial de CSS](https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/)
@@ -440,3 +465,154 @@ Ten en cuenta que
 
 <hr/>
 
+# Git
+Git es una herramienta que permite trabajar colaborativamente en el mismo proyecto, mantener versionamiento para revertir a versiones anteriores y crear ramas en las cuales se puedan experimentar. Sin herramientas de versionamiento como git, sería imposible sacar adelante proyectos de software complejos.
+Existen varias herramientas basadas en git que permiten subir los repositorios a servidores centralizados, tal vez la más usada es [github](https://github.com). Si no tienes una cuenta de github, puedes abrirla gratis en la página.
+
+[Este]( https://cs50.harvard.edu/web/2020/weeks/1/) curso explica muy bien las funciones más importantes de git, **Termina de ver este video antes de seguir con el turorial**
+
+Al final de este tutorial vas a contribuir a este mismo proyecto de github, agregando un archivo de html y modificando un archivo ya existente en el proyecto. Aunque git es una herramienta que se trabaja por consola hay varios programas que ayudan con interfaces gráficas para ayudar a la visualización. De hecho la mayoría de editores de código tienen herramientas para hacer funciones básicas sin la necesidad de utilizar la consola. Por ejemplo, [acá](https://code.visualstudio.com/docs/editor/github) encontrarás como hacerlo con visual studio code.
+Es recomendable primero aprender a trabajar con la consola para aprender bien los conceptos antes de utilizar estas herrramientas, por eso cubriremos los comandos por consola en este tutorial.
+
+
+
+### instalar git
+Para instalar git puedes seguir las instrucciones de [este](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) sitio dependiendo de tu sistema operativo.
+
+### Terminal en VScode
+Para ingresar los comandos puedes utilizar la terminal del computador o puedes utilizar la [terminal integrada](https://code.visualstudio.com/docs/editor/integrated-terminal) en visual studio code.
+
+## Qué es un repositorio?
+Es una carpeta que guarda nuestro código e información acerca de nuestro código como por ejemplo los cambios que se han hecho, las diferentes versiones, quienes han hecho los diferentes cambios en archivos etc.
+
+Github guarda repositorios para que podamos descargarlos, manipularlos y volver a subirlos desde cualquier lado.
+
+
+## Clone
+
+El primer comando que veremos es `git clone` este permite descargar un repositorio en tu computador.
+para esto, en cualquier carpeta de tu computador, y despues de haber instalado git, ingresa el comando `git clone` seguido de la url del repositorio. Por ejemplo, para clonar el repositorio en el que se encuentra este tutorial escribe
+>git clone https://github.com/CapituloJaverianoACM/intro-desarrollo-web.git
+
+Esto descargará una carpeta (en este caso llamada intro-desarrollo-web), este es el repositorio. 
+usando
+>cd intro-desarrollo-web
+
+Cambiarás a la carpeta que acabas de descargar. Ahora, con el comando
+
+>ls
+
+Podrás ver todos los archivos y carpetas en el repositorio.
+
+
+Felicitaciones! acabas de clonar un repositorio.
+
+## Commits
+Un commit es un estado del proyecto que se guarda en el repositorio. Básicamente es la forma de decirle a git que queremos gardar el estado actual del proyecto pues es un estado relevante o una version que vale la pena mantener al menos hasta tener una nueva versión.
+
+Al trabajar en un proyecto, una vez se llegue a un estado que se quiera guardar, con el comando `git add <archivo>` 
+
+para hacer commit, primero debes agregar los archivos al "staging area". Con el comando `git add <archivos>` puedes agregar los archivos que quieras a esta area. Para agregar todos los archivos puedes usar 
+> git add .
+
+Para ver el estado puedes usar 
+
+>git status
+
+Ahi podrás ver que archivos están en el staging area listos para el commit.
+Por último puedes hacer el commit con.
+
+>git commit -m "Este debe ser un mensaje explicativo de los cambias que se han hecho en este commit"
+
+si vuelves a escribir
+
+>git status
+
+Vas a notar que el staging area está vacia otra vez.
+
+### Ramas
+Una de las funcionalidades más importantes de los sistemas de versionamiento es poder utilizar ramas o "branches" para no afectar el código en una rama diferente. Por default todos los repoisitorios tienen una rama principal llamada "main".
+
+[Acá ](https://www.youtube.com/watch?v=iJKIxrJ40ss&t=77s) puedes ver mas sobre ramas. 
+
+Por ejemplo, si estamos parados en la rama main y escribimos 
+>git branch -l
+
+nos mostrará todas las ramas que hay actualmente.
+
+Al escribir
+>git branch nueva-rama
+
+Crearemos una nueva rama con el nombre `nueva-rama` **pero aun estamos en main**. para cambiar a una rama diferente (por ejemplo a nueva-rama) se utiliza el comando checkout, asi:
+
+>git checkout nueva-rama
+
+para confirmar, puedes escribir otra vez 
+
+>git branch -l
+ y verás que ahora estás en la nueva rama.
+
+ Has commit antes de cambiarte de una rama a otra para no perder el progreso. Tambien podrías usar otras técnicas en vez de hacer commit para no perder el progreso, pero eso va mas alla de este tutorial, hay más información [aquí](https://git-scm.com/docs/git-stash).
+
+Es recomendable trabajar en diferentes ramas si hay múltiples desarrolladores en el mismo proyecto para evitar problemas. Además, en es necesario pactar una política para manejar las ramas, por ejemplo, que cada desarrollador siempre trabaje en una rama con su nombre y cada vez que tenga cambios significativo.
+
+
+## Push
+hasta ahora, Todos los cambios que hagas (todos los commits) solo se haran localmente, es decir que el repositorio en github no verá ningun cambio hasta que no hagas push de tus cambios. Para esto utilizas es comando `git push` seguido del servidor al cual vas a hacer los cambios y de la rama. Por ejemplo
+
+>git push origin nueva-rama
+
+Subirá al servidor de github los commits que hasta ahora eran locales en la rama nueva-rama.
+
+*origin es el nombre que se le da al repositorio remoto*
+
+## merge
+Este comando permite unir dos ramas. Por ejemplo, si estoy parado en la rama `main`. De esta manera:
+![alt text](images/merge1.png)
+
+ y escribo
+
+>git merge nueva-rama
+
+Los commits de la nueva rama quedarían unidos a la rama principal, así:
+
+![alt text](images/merge2.png)
+
+## pull
+Para obtener la version mas actualizada del repositorio, basta con escribir
+
+>git pull
+ 
+Esto descargará en tu computador todos los cambios que haya en el servidor remoto que aun no se vean reflejados localmente.
+
+
+## pull request
+Ahora.... supongamos que varios desarrolladores han trabajado cada uno en sus ramas diferentes.... Cómo juntan todo el trabajo? La forma más fácil, más organizada y mas recomendable es hacer un pull request. Esto le informará al dueño del repositorio que alguien quiere hacer un cambio y él podrá aceptarlo o rechazarlo.
+
+![alt text](images/PR.png)
+
+
+Para esto, debes trabajar en una rama separada, hacerle push a esa rama y luego utilizar, ya sea github desktop o el sitio web de github, para hacer un pull request
+
+## Pasos
+
+- Abre una cuenta gratis en github
+- clona el repositorio
+- crea una rama con tu nombre
+- modifica el archivo index.html para agregar un boton que lleve a tu página
+- crea tu página en un archivo html con tu nombre y apellido por ejemplo: *juan_perez.html*
+- añade tus cambios, haz un commit
+- haz un pull request para incorporar tus cambios a la rama principal.
+
+
+
+
+## Link útiles
+
+- [CS50 de harvard](https://cs50.harvard.edu/web/2020/weeks/1/)
+- [curso en udemy gratis](https://www.udemy.com/course/git-started-with-github/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_88010211481_._ad_437497337004_._kw__._de_c_._dm__._pl__._ti_dsa-406594358574_._li_1003659_._pd__._&matchtype=b&gclid=CjwKCAiA9vOABhBfEiwATCi7GIS4w_5dY-AdXRuhikIm5PQ2ttjcZYMe_aGIKKvSgdu9ED5ZiDQeIhoC60EQAvD_BwE)
+- [github en vscode](https://code.visualstudio.com/docs/editor/github)
+- [cheat sheet de comandos de git](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
+- [terminal integrada en vscode](https://code.visualstudio.com/docs/editor/integrated-terminal)
+- [pull requests](https://www.youtube.com/watch?v=rgbCcBNZcdQ)
+- [gir merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
